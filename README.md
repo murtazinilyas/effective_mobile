@@ -9,7 +9,7 @@
     4. Если процесс был перезапущен, писать в лог /var/log/monitoring.log (если процесс не запущен, то ничего не делать) 
     5. Если сервер мониторинга не доступен, так же писать в лог.
 
-### Скрипт мониторинга работы процесса test:
+### [Скрипт](https://github.com/murtazinilyas/effective_mobile/blob/main/test.sh) мониторинга работы процесса test:
 
 ```bash
 #!/bin/bash
@@ -46,7 +46,7 @@ if pgrep -x "$proc_name" > /dev/null; then #Проверяем запущен л
 fi
 ```
 
-### Unit systemd для запуска скрипта:
+### [Unit](https://github.com/murtazinilyas/effective_mobile/blob/main/test.service) systemd для запуска скрипта:
 
 ```
 [Unit]
@@ -61,7 +61,7 @@ ExecStart=/var/log/test.sh
 WantedBy=multi-user.target
 ```
 
-### Таймер для запуска скрипта при загрузке системы и далее каждую минуту:
+### [Таймер](https://github.com/murtazinilyas/effective_mobile/blob/main/test.timer) для запуска скрипта при загрузке системы и далее каждую минуту:
 
 ```
 [Unit]
