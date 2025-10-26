@@ -1,0 +1,10 @@
+[Unit]
+Description=Monitoring of test process
+Wants=test.timer
+
+[Service]
+Type=simple
+ExecStart=/var/log/test.sh
+
+[Install]
+WantedBy=multi-user.target

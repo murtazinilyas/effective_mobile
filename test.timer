@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for monitor process test
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+AccuracySec=1sec
+
+[Install]
+WantedBy=timers.target
