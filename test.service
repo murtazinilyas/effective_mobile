@@ -4,7 +4,7 @@ Wants=test.timer
 
 [Service]
 Type=simple
-ExecStart=/var/log/test.sh
+ExecStart=/usr/local/bin/test.sh
 
 [Install]
 WantedBy=multi-user.target
