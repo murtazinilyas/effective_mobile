@@ -15,8 +15,8 @@
 #!/bin/bash
 
 #Задаем переменные для более легкого написания скрипта
-log_file="/var/log/monitoring.log" #Указываем адрес и имя файла лога
-pid_file="/tmp/pid" #Записываем сюда айди процесса для проверки на его перезапуск
+log_file="/var/log/test_monitoring.log" #Указываем адрес и имя файла лога
+pid_file="/var/run/test_pid" #Записываем сюда айди процесса для проверки на его перезапуск
 proc_name="test" #Имя искомого процесса
 mon_srv="https://test.com/monitoring/test/api" #Адрес сервера
 
@@ -55,7 +55,7 @@ Wants=test.timer
 
 [Service]
 Type=simple
-ExecStart=/var/log/test.sh
+ExecStart=/usr/local/bin/test.sh
 
 [Install]
 WantedBy=multi-user.target
@@ -68,9 +68,9 @@ WantedBy=multi-user.target
 Description=Timer for monitor process test
 
 [Timer]
-OnBootSec=1min
-OnUnitActiveSec=1min
-AccuracySec=1sec
+OnBootSec=1m
+OnUnitActiveSec=1m
+AccuracySec=1s
 
 [Install]
 WantedBy=timers.target
