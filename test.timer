@@ -2,9 +2,9 @@
 Description=Timer for monitor process test
 
 [Timer]
-OnBootSec=1min
-OnUnitActiveSec=1min
-AccuracySec=1sec
+OnBootSec=1m
+OnUnitActiveSec=1m
+AccuracySec=1s
 
 [Install]
 WantedBy=timers.target
