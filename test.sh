@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #Задаем переменные для более легкого написания скрипта
-log_file="/var/log/monitoring.log" #Указываем адрес и имя файла лога
-pid_file="/tmp/pid" #Записываем сюда айди процесса для проверки на его перезапуск
+log_file="/var/log/test_monitoring.log" #Указываем адрес и имя файла лога
+pid_file="/var/run/test_pid" #Записываем сюда айди процесса для проверки на его перезапуск
 proc_name="test" #Имя искомого процесса
 mon_srv="https://test.com/monitoring/test/api" #Адрес сервера
 
